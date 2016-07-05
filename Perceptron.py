@@ -1,5 +1,7 @@
 import numpy as np
 
+# basic implementation of a binary perceptron learning model that takes in a matrix X as data and a list y of the corresponding expected
+# values, and determines a binary classification. 
 class Perceptron(object):
 
     def __init__(self, lrate=0.01, numiter=10):
@@ -28,6 +30,4 @@ class Perceptron(object):
     def predict(self,X):
         return np.where(self.net_input(X) >= 0.0, 1, -1)
 
-ppn = Perceptron(lrate = 0.2, numiter = 20)
 
-print(ppn.lrate)
